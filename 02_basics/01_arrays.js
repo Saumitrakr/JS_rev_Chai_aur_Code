@@ -28,12 +28,13 @@ const myArr2 = new Array(1, 2, 3, 4)
 
 console.log("A ", myArr);
 
+// puts myArr[1] and myArr[2] in a new myn1 array ; do not disturb the original array
 const myn1 = myArr.slice(1, 3)
 
 console.log(myn1);
 console.log("B ", myArr);
 
-
+// puts myArr[1], myArr[2] & myArr[3] in a new myn1 array ; removes this part from the original array
 const myn2 = myArr.splice(1, 3)
 console.log("C ", myArr);
 console.log(myn2);
