@@ -1,7 +1,9 @@
-// singleton
-// Object.create
+// Objects can be declared in two ways : Literals & Constructor
 
-// object literals
+// singleton
+// Object.create ( constructor method )
+
+// object literals ; no singleton
 
 const mySym = Symbol("key1")
 
@@ -17,16 +19,21 @@ const JsUser = {
     lastLoginDays: ["Monday", "Saturday"]
 }
 
+// Can't access symbol or string if given as a key by . notation
+// Objectname["String key"] ; Objectname[Symbol]
+
 // console.log(JsUser.email)
 // console.log(JsUser["email"])
 // console.log(JsUser["full name"])
 // console.log(JsUser[mySym])
 
 JsUser.email = "hitesh@chatgpt.com"
-// Object.freeze(JsUser)
+// Object.freeze(JsUser)  -> after freeze further changes to this object doesn't propagate
 JsUser.email = "hitesh@microsoft.com"
 // console.log(JsUser);
 
+
+// function as a value of a key in an object
 JsUser.greeting = function(){
     console.log("Hello JS user");
 }
