@@ -29,6 +29,8 @@ for (const [key, value] of map) {
     // console.log(key, ':-', value);
 }
 
+// objects are not iterable with this approach
+
 const myObject = {
     game1: 'NFS',
     game2: 'Spiderman'
